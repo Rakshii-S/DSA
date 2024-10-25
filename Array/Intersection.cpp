@@ -15,8 +15,7 @@ int Intersection(int n, int a1[], int a2[])
             i++;
             continue;
         }
-        if( j>0 && a2[j] == a2[j-1])
-        {
+        if( j>0 && a2[j] == a2[j-1]){
             j++;
             continue;
         }
