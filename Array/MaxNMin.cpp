@@ -31,4 +31,5 @@ int main()
         cin>>arr[i];
     } 
     MaxNMin(n,arr);
+    
 }

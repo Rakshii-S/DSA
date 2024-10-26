@@ -12,6 +12,7 @@ int Fibonacci(int n)
         a = b;
         b = c;
     }
+    return 0;
 }
 int main()
 {

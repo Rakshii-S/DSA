@@ -7,7 +7,7 @@ int LinearSearch(int a[], int n, int t)
     {
         if(a[i] == t)
         {
-            return i+1;
+             return i+1;
         }
     }
     return -1;

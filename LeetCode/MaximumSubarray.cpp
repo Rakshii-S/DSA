@@ -12,7 +12,7 @@ int MaximumSubarray(vector<int> &vec, int n)
         maxSum = max(maxSum, currSum);
         if(currSum<0)
         {
-            currSum =0;
+            currSum =0;  
         }
     }
     return maxSum;
