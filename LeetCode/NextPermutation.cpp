@@ -18,12 +18,7 @@ int NextPermutation(vector<int> &nums, int n)
     i=0, j=n-1;
     if(pivot == -1)
     {
-        while(i<=j)
-        {
-            swap(nums[i], nums[j]);
-            i++;
-            j--;
-        }
+        reverse(nums.begin(), nums.end());
         return 0;
     }
 
