@@ -12,7 +12,6 @@ int main()
     cin>>str;
     cout<<"Enter the sub string:";
     cin>>sub;
-    cout<<str.find(sub)<<" ";
     while(str.length()>0 && str.find(sub)<str.length())
     {
         int position = str.find(sub);
