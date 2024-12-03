@@ -4,33 +4,33 @@
 #include <unordered_set>
 using namespace std;
 
-int ShortestPathBFS(vector<vector<int>> &Croads)
+int ShortestPathBFS(vector<vector<int>> &gr)
 {
-    queue<int> Queue;
-    unordered_set<int> visited;
-    int distance = 0;
-    Queue.push(0);
-    visited.insert(0);
-    while(!Queue.empty())
+    queue<int> Que;
+    unordered_set<int> Vis;
+    Que.push(0);
+    Vis.insert(0);
+    int dist = 0;
+    while(!Que.empty())
     {
-        int size = Queue.size();
+        int size = Que.size();
         while(size>0)
         {
-            int node = Queue.front();
-            Queue.pop();
-            if(node == Croads.size()-1) 
-                return distance;
-            for(int neighbors: Croads[node])
+            int node  = Que.front();
+            Que.pop();
+            if(node == gr.size()-1)
+                return dist;
+            for(int neighbour: gr[node])
             {
-                if(visited.find(neighbors) == visited.end())
+                if(Vis.find(neighbour) == Vis.end())
                 {
-                    Queue.push(neighbors);
-                    visited.insert(neighbors);
+                    Que.push(neighbour);
+                    Vis.insert(neighbour);
                 }
             }
             size--;
         }
-        distance++;
+        dist++;
     }
     return -1;
 }
@@ -40,9 +40,9 @@ int main()
     int n, rows, cols;
     cout<<"Enter the number of cities: ";
     cin>>n;
-    cout<<"Enter rows and columns: ";
+    cout<<"Enter the rows and columns: ";
     cin>>rows>>cols;
-    cout<<"Enter the additional roads:";
+    cout<<"Enter the addition of roads from one city to another: ";
     vector<vector<int>> queries(rows, vector<int>(cols));
     for(int i=0;i<rows;i++)
     {
@@ -53,19 +53,19 @@ int main()
     }
 
     //logic
-    vector<vector<int>> Croads(n);
+    vector<vector<int>> gr(n);
     vector<int> result(queries.size());
     for(int i=0;i<n-1;i++)
     {
-        Croads[i].push_back(i+1);
+        gr[i].push_back(i+1);
     }
-
     for(int i=0;i<queries.size();i++)
     {
-        Croads[queries[i][0]].push_back(queries[i][1]);
-        result[i] = ShortestPathBFS(Croads);
+        gr[queries[i][0]].push_back(queries[i][1]);
+        result[i] = ShortestPathBFS(gr);
     }
-    //print the final answer
+
+    //print th results
     for(int i=0;i<result.size();i++)
     {
         cout<<result[i]<<" ";
