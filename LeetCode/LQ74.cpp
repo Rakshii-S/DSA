@@ -2,7 +2,7 @@
 #include <vector>
 
 using namespace std;
-bool SearchInRow(vector<vector<int>> &matrix, int target, int row)
+bool SearchInRow(vector<vector<int>> &matrix, int target, int row)//Olog(m)
 {
     int n = matrix[0].size();
     int start = 0, end = n-1;
@@ -18,7 +18,7 @@ bool SearchInRow(vector<vector<int>> &matrix, int target, int row)
     }
     return false;
 }
-bool BinarySearch(vector<vector<int>> &matrix, int target)
+bool BinarySearch(vector<vector<int>> &matrix, int target)//O(logn)
 {
     int m = matrix.size(), n= matrix[0].size();
     int start = 0, end = m-1;
