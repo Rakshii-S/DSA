@@ -1,17 +1,16 @@
-// vector<vector<int>> Croads;
-    // vector<int> result(queries.size());
-    // for(int i=0;i<n-1;i++)
-    // {
-    //     Croads[i].push_back(i+1);
-    // }
-
-    // for(int i=0;i<queries.size();i++)
-    // {
-    //     Croads[queries[i][0]].push_back(queries[i][1]);
-    //     result[i] = ShortestPathBFS(Croads);
-    // }
-    // //print the final answer
-    // for(int i=0;i<result.size();i++)
-    // {
-    //     cout<<result[i]<<" ";
-    // }
+int eSum =0, aSum = 0,a,b;
+    for(int i=0;i<row;i++)
+    {
+        for(int j=0;j<col;j++)
+        {
+            aSum+=nums[i][j];
+            if(val.find(nums[i][j]) != val.end())
+            {
+                a = nums[i][j]; //repeat
+            }
+            val.insert(nums[i][j]);
+        }
+    }
+    eSum = (row*row) * (row*row+1)/2;
+    b = eSum - a + aSum;//missing
+    cout<<a<<" "<<b;
