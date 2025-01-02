@@ -57,4 +57,5 @@ int main()
     }
     MergeSort(arr,0,n-1,cnt);
     cout<<"The count inversions is: "<<cnt;
+    
 }
