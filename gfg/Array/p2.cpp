@@ -1,35 +1,35 @@
-//Second Largest Element 
+//Third Largest Element
 #include <iostream>
 #include <vector>
 
 using namespace std;
 
-int SecondLargestEle(vector<int> &num)
+int ThirdLargestEle(vector<int> &num)
 {
-    int first = -1, second=-1;
+    int first = -1, second = -1, third = -1;
     for(int i=0;i<num.size();i++)
     {
         if(num[i]>first)
         {
+            third = second;
             second = first;
             first = num[i];
         }else if(num[i]>second && num[i]<first)
         {
+            third = second;
             second = num[i];
+        }else if(num[i]>third && num[i]<first && num[i]<second)
+        {
+            third = num[i];
         }
     }
-    return second;
+    return third;
 }
 int main()
 {
     int n;
     cout<<"Enter the range: ";
     cin>>n;
-    if(n<2)
-    {
-        cout<<"Array size should be greater than or equal to 2.";
-        return 0;
-    }
     vector<int> num(n,0);
     cout<<"Enter the values: ";
     for(int i=0;i<n;i++)
@@ -37,11 +37,9 @@ int main()
         cin>>num[i];
     }
 
-    int ans = SecondLargestEle(num);
+    int ans = ThirdLargestEle(num);
     if(ans == -1)
-        cout<<"Second largest element does not exist.";
+        cout<<"Third largest element does not exist.";
     else
-        cout<<"The second largest element is: "<<ans;
-
-    return 0;
+        cout<<"The third largest element is: "<<ans;
 }
