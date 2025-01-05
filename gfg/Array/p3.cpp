@@ -1,5 +1,26 @@
 //Three Great Candidates
 //Maximum product of a triplet(subsequence of size 3) in array
+
+/*Given an integer array, find a maximum product of a triplet in the array.
+
+Examples: 
+
+Input:  [10, 3, 5, 6, 20]
+Output: 1200
+Explanation: Multiplication of 10, 6 and 20
+
+
+
+Input:  [-10, -3, -5, -6, -20]
+Output: -90
+
+
+
+Input:  [1, -4, 3, -6, 7, 0]
+Output: 168
+
+*/
+
 #include <iostream>
 #include <climits>
 #include <vector>
