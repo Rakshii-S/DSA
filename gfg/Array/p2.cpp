@@ -49,3 +49,5 @@ int main()
     else
         cout<<"The third largest element is: "<<ans;
 }
+
+//other method is using sort function and slicing -> time complexity will be O(nlogn)
