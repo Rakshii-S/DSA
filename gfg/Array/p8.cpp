@@ -50,7 +50,7 @@ int main()
 
     WaveForm(num);
 
-    cout<<"Value of array after rotating: ";
+    cout<<"Value of array after sorting: ";
     for(int i=0;i<n;i++)
     {
         cout<<num[i]<<" ";
