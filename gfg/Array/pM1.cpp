@@ -11,7 +11,6 @@ Explanation:
 Removing arr[1] from the array modifies arr[] to { 2, 6, 4 } such that, arr[0] + arr[2] = arr[1]. 
 Therefore, the required output is 1. 
 
-
 Input: arr[] = { 1, 1, 1 } 
 Output: 3 
 Explanation: 
