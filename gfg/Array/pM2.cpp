@@ -19,7 +19,12 @@ operation | increased elements | after increment
      1    |    1, 2           | 5, 4, 4
      2    |    2, 3           | 5, 5, 5 */
 
-/*Better Approach : If we took a closer look at each operation as well problem statement we will find that increasing all n-1 element except the largest one is similar to decreasing the largest element only. So, the smallest elements need not to decrease any more and rest of elements will got decremented upto smallest one. In this way the total number of operation required for making all elements equal will be arraySum – n * (smallestElement). Time complexity will be same as that of finding smallest elements and array sum i.e. O(n).*/
+/*Better Approach : If we took a closer look at each operation as well problem statement we will 
+find that increasing all n-1 element except the largest one is similar to decreasing the largest 
+element only. So, the smallest elements need not to decrease any more and rest of elements will 
+got decremented upto smallest one. In this way the total number of operation required for making 
+all elements equal will be arraySum – n * (smallestElement). Time complexity will be same as that
+of finding smallest elements and array sum i.e. O(n).*/
 
 #include <iostream>
 #include <vector>
