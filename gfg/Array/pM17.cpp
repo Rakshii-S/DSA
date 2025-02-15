@@ -56,5 +56,4 @@ int main()
     else    
         cout<<"The element is "<<ans;
     return 0;
-    
 }
